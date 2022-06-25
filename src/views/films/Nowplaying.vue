@@ -41,7 +41,7 @@ Vue.filter('actorsFilter', (data) => {
   if (data === undefined) return '暂无主演'
   return data.map((item) => item.name).join('/')
 })
-export default {
+export default{
   data () {
     return {
       datalist: [],
@@ -51,7 +51,7 @@ export default {
       total: 0
     }
   },
-  mounted () {
+  mounted (){
     http({
       url: `/gateway?cityId=${this.$store.state.cityId}&pageNum=1&pageSize=10&type=1&k=5950229`,
       headers: {
