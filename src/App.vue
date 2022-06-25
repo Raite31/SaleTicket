@@ -1,32 +1,44 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div>
+      <tabber ref="mytabber" v-show="$store.state.isTabbarShow"></tabber>
+
+      <!-- 路由容器 -->
+    <section>
+      <router-view></router-view>
+    </section>
   </div>
 </template>
+<script>
+import Vue from 'vue'
+import Vant from 'vant'
+import 'vant/lib/index.css'
+import tabber from '@/components/Tabber'
+Vue.use(Vant) // 全局注册组件，所以组件库里的组件拿来就能用了
+export default {
+  data () {
+    return {
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
     }
+  },
+  components: {
+    tabber
   }
 }
+</script>
+<style lang="scss">
+  // 这个class名是上面使用router-link，在网页选中时自动添加的，可自定义
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    height: 100%;
+  }
+  ul{
+    list-style: none;
+  }
+  section{
+    padding-bottom: 2.7222rem;
+  }
+
 </style>
