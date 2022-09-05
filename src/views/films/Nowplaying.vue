@@ -1,7 +1,7 @@
 <template>
   <div>
     <van-list
-      v-model = "loading"
+      v-model="loading"
       :finished="finished"
       finished-text="我是有底线的"
       @load="onLoad"

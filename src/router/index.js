@@ -45,7 +45,8 @@ const routes = [
     path: '/city',
     component: City
   },
-  { // 一个像二级页面，实际是同级页面的路由（像在饿了么点“搜索”的情况）
+  {
+    // 一个像二级页面，实际是同级页面的路由（像在饿了么点“搜索”的情况）
     path: '/cinemas/search',
     component: Search
   },
@@ -86,7 +87,6 @@ const routes = [
     path: '*',
     redirect: '/films'
   }
-
 ]
 
 const router = new VueRouter({
@@ -99,6 +99,9 @@ const router = new VueRouter({
 
 // 全局拦截
 router.beforeEach((to, from, next) => {
+  // to：到哪里
+  // from：从哪来
+  // next：若不需要拦截，就用next()
   // console.log(to)
   // 无条件放行
   // next()

@@ -12,6 +12,7 @@
 import Vue from 'vue'
 import Vant from 'vant'
 import 'vant/lib/index.css'
+// @ 别名 ===> src的绝对路径
 import tabber from '@/components/Tabber'
 Vue.use(Vant) // 全局注册组件，所以组件库里的组件拿来就能用了
 export default {

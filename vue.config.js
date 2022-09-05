@@ -1,3 +1,4 @@
+// 配置文件，覆盖
 module.exports = {
   lintOnSave: false, // 关闭代码格式检测
 
@@ -17,7 +18,7 @@ module.exports = {
       //   target: 'https://i.maoyan.com/',
       //   changeOrigin: true,
       //   pathRewrite: { // 这里是去掉自己加的那部分
-      //     '^/kerwin': ''
+      //     '/kerwin': ''
       //   }
     }
   }

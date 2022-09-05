@@ -129,9 +129,6 @@ export default {
       duration: 0
     }
   },
-  destroyed () {
-    window.onscroll = null
-  },
   components: {
     detailSwiper,
     detailSwiperItem,
@@ -169,6 +166,9 @@ export default {
         console.log('隐藏')
       }
     }
+  },
+  destroyed () {
+    window.onscroll = null
   }
 }
 </script>
